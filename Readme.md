@@ -1,13 +1,37 @@
-# RCFJSSP Instance Format
+# RCFJSSP
+
+This repository includes generated problem instance for the FJSSP with multiple renewable, non-renewable and cumulative resources. Such resources are used in the form of tool resources, utility resources, limited capacity machine buffers, WIP buffers and arbitrary non-renewable resources.
+
+
+
+
+## Repository Contents
+
+
+Instances are organized into four folders:
+
+
+* Folder "Experiment 1" includes problem instance considering only limited capacity buffers
+
+* Folder "Experiment 2" includes problem instance considering only tool resources
+
+* Folder "Experiment 3" includes problem instance considering only WIP buffer and non-renewable arbitrary resources
+
+* Folder "Experiment 4" includes large-scale problem instance considering all types of resources simulateneously
+
+
+
+
+## Instance Format
 
 In general the format of the RCFJSSP is based on the well establised format of the clasical FJSSP instances (see Brandimarte et. al. (1998) and Dauzere-Peres, S. and Paulli, J. (1997)) that is extended to provide information regarding multiple types of resources.
 
 
-## Header
+### Header
 
 The header (first line) of the file contains 9 numbers: the number of jobs, the number of machines, the problem flexibility, the number of utility resources, the number of tool resources, the number of WIP buffers, the number of arbitrary non-renewable resources as well as two seeds used from the instance generator
 
-### Resources Section
+#### Resources Section
 
 The next section of the file includes the definition of all the resources of the problem (if any)
 
@@ -23,7 +47,7 @@ The following *number of arbitrary resources* lines, define all the non-renewabl
 
 
 
-### Job Section
+#### Job Section
 
 The next section of the file includes the definition of all the jobs and job operations as well as their correlation with the available resources.
 
